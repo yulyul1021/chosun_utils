@@ -18,7 +18,14 @@ from django.urls import path, include
 
 from chosun_utils import views
 
+app_name = 'chosun_utils'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
+    path('', views.index, name='index'),
+    path('chosun_calendar/', views.calendar, name='calendar'),
+    path('chosun_notice/', views.notice, name='notice'),
+    path('chosun_language/', views.language, name='language'),
+    path('chosun_scholarship/', views.scholarship, name='scholarship'),
+    path('chosun_program/', views.program, name='program'),
 ]

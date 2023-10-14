@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Todo, Scrap
 from .forms import TodoForm, ScrapForm
 
@@ -26,3 +26,35 @@ def index(request):
         'todos': todos,
         'scraps': scraps,
     })
+
+
+def delete_todo(request, todo_id):
+    todo = get_object_or_404(Todo, pk=todo_id)
+    todo.delete()
+    return redirect('')
+
+
+def delete_scrap(request, scrap_id):
+    scrap = get_object_or_404(Scrap, pk=scrap_id)
+    scrap.delete()
+    return redirect('')
+
+
+def calendar(request):
+    return render(request, 'chosun_utils/chosun_calendar.html')
+
+
+def notice(request):
+    return render(request, 'chosun_utils/chosun_notice.html')
+
+
+def language(request):
+    return render(request, 'chosun_utils/chosun_language.html')
+
+
+def scholarship(request):
+    return render(request, 'chosun_utils/chosun_scholarship.html')
+
+
+def program(request):
+    return render(request, 'chosun_utils/chosun_program.html')

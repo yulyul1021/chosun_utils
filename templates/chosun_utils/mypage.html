@@ -66,10 +66,10 @@
                                 {% endfor %}
 
 
-                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                <a href="#"
+                                   class="list-group-item list-group-item-action flex-column align-items-start">
 
-
-                                    <form class="my-5 mb-3" id="ScrapForm">
+                                    <form id="ScrapForm" method="post">
                                         {% csrf_token %}
                                         <div class="form-group row my-3">
                                             <label for="title" class="col-sm-2 col-form-label">내용</label>
@@ -85,7 +85,8 @@
                                                        placeholder="URL">
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-lg ">Add</button>
+                                        <button type="submit" class="btn btn-primary btn-lg" name="scrap_submit">Add
+                                        </button>
                                     </form>
 
                                 </a>
@@ -122,13 +123,6 @@
             }
         });
     });
-
-
-
-
-
-
-
 
 </script>
 </body>

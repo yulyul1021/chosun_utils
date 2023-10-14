@@ -43,7 +43,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
     <div class="container-md">
-        <a class="navbar-brand" href="#">My Page</a> <!--투두, 학점, 시간표-->
+        <a class="navbar-brand" href="{% url 'index' %}">My Page</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -56,11 +56,11 @@
                         교내 정보
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">학사 일정</a></li>
-                        <li><a class="dropdown-item" href="#">학생 공지</a></li>
-                        <li><a class="dropdown-item" href="#">언어교육원</a></li>
-                        <li><a class="dropdown-item" href="#">장학 안내</a></li>
-                        <li><a class="dropdown-item" href="#">비교과프로그램</a></li>
+                        <li><a class="dropdown-item" href="{% url 'calendar' %}">학사 일정</a></li>
+                        <li><a class="dropdown-item" href="{% url 'notice' %}">학생 공지</a></li>
+                        <li><a class="dropdown-item" href="{% url 'language' %}">언어교육원</a></li>
+                        <li><a class="dropdown-item" href="{% url 'scholarship' %}">장학 안내</a></li>
+                        <li><a class="dropdown-item" href="https://cuplus.chosun.ac.kr/main/#189", target="_blank">비교과프로그램</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
