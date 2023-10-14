@@ -1,0 +1,88 @@
+{% load static %}
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.js' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+    <title>Title</title>
+
+    <style>
+    body { background-color:#F8F9FA;}
+
+      div.row {
+        width: 100%;
+        display: flex;
+      }
+      div.left {
+        width: 45%;
+        float: left;
+      }
+      div.right {
+        width: 55%;
+        float: right;
+      }
+
+    .navbar-brand,
+    .nav-item.dropdown .nav-link {
+        font-size: 18px; /* Adjust the font size as needed */
+        font-weight: bold; /* Make the font bold */
+    }
+
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+    <div class="container-md">
+        <a class="navbar-brand" href="#">My Page</a> <!--투두, 학점, 시간표-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        교내 정보
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">학사 일정</a></li>
+                        <li><a class="dropdown-item" href="#">학생 공지</a></li>
+                        <li><a class="dropdown-item" href="#">언어교육원</a></li>
+                        <li><a class="dropdown-item" href="#">장학 안내</a></li>
+                        <li><a class="dropdown-item" href="#">비교과프로그램</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        교외 정보
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">워크넷</a></li>
+                        <li><a class="dropdown-item" href="#">알바몬</a></li>
+                        <li><a class="dropdown-item" href="#">캠퍼스픽</a></li>
+                        <li><a class="dropdown-item" href="#">대티즌(공모전)</a></li>
+                        <li><a class="dropdown-item" href="#">광주청년센터</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- 기본 템플릿 안에 삽입될 내용 Start -->
+{% block content %}
+{% endblock %}
+<!-- 기본 템플릿 안에 삽입될 내용 End -->
+</body>
+</html>
