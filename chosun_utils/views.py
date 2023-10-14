@@ -56,5 +56,9 @@ def scholarship(request):
     return render(request, 'chosun_utils/chosun_scholarship.html')
 
 
+def ctl(request):
+    return render(request, 'chosun_utils/chosun_ctl.html')
+
+
 def program(request):
     return render(request, 'chosun_utils/chosun_program.html')

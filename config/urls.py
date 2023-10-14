@@ -27,5 +27,6 @@ urlpatterns = [
     path('chosun_notice/', views.notice, name='notice'),
     path('chosun_language/', views.language, name='language'),
     path('chosun_scholarship/', views.scholarship, name='scholarship'),
+    path('chosun_ctl/', views.ctl, name='ctl'),
     path('chosun_program/', views.program, name='program'),
 ]
