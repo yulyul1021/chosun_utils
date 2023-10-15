@@ -23,10 +23,17 @@ app_name = 'chosun_utils'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+
     path('chosun_calendar/', views.calendar, name='calendar'),
     path('chosun_notice/', views.notice, name='notice'),
     path('chosun_language/', views.language, name='language'),
     path('chosun_scholarship/', views.scholarship, name='scholarship'),
     path('chosun_ctl/', views.ctl, name='ctl'),
     path('chosun_program/', views.program, name='program'),
+
+    path('extra_work/', views.work, name='work'),
+    path('extra_sidejob/', views.sidejob, name='sidejob'),
+    path('extra_campuspick/', views.campuspick, name='campuspick'),
+    path('extra_competition/', views.competition, name='competition'),
+    path('extra_gjyouth/', views.gjyouth, name='gjyouth'),
 ]

@@ -62,3 +62,23 @@ def ctl(request):
 
 def program(request):
     return render(request, 'chosun_utils/chosun_program.html')
+
+
+def work(request):
+    return render(request, 'chosun_utils/extra_work.html')
+
+
+def sidejob(request):
+    return render(request, 'chosun_utils/extra_sidejob.html')
+
+
+def campuspick(request):
+    return render(request, 'chosun_utils/extra_campuspick.html')
+
+
+def competition(request):
+    return render(request, 'chosun_utils/extra_competition.html')
+
+
+def gjyouth(request):
+    return render(request, 'chosun_utils/extra_gjyouth.html')
